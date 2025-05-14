@@ -76,7 +76,7 @@ def handle_query(call):
 def handle_contact_input(message):
     chat_id = message.chat.id
     user_data[chat_id]["contact_info"] = message.text
-    bot.send_message(chat_id, "⬇️ Have you contacted me on Instagram before? (@ ethanban)", reply_markup=contacted_markup())
+    bot.send_message(chat_id, "⬇️ Have you contacted me on Instagram before? (@ ethanban)\n_**(Your free eBook will be sent after this)**_", reply_markup=contacted_markup())
 
 def generate_summary(user, chat_id):
     data = user_data.get(chat_id, {})
