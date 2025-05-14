@@ -67,8 +67,8 @@ def handle_query(call):
         bot.send_message(chat_id,
             "🤑 Thanks for applying — I’ll personally reach out and send you the eBook below.\n\n"
             "You can read over this and get a full rundown of how it all works.\n\n"
-            "📲 I’ll be in touch today and we can chat about getting you live 🥵👌🏽\n\n"
-            "<YOUR_EBOOK_LINK_HERE>")
+            "📲 I’ll be in touch today and we can chat about getting you live 🥵👌🏽")
+        bot.send_document(chat_id, open("Ethan's Ecom Money Printer.pdf", "rb"))
         bot.send_message(chat_id=ADMIN_ID, text=summary)
 
 def handle_contact_input(message):
