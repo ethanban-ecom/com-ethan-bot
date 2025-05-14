@@ -4,7 +4,7 @@ import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_ID = 8015442876  # User's Telegram numeric ID
+ADMIN_ID = 8015442876
 
 bot = telebot.TeleBot(TOKEN)
 user_data = {}
@@ -13,6 +13,8 @@ user_data = {}
 def start(message):
     chat_id = message.chat.id
     user_data[chat_id] = {}
+    photo = open("98545A51-9460-4316-948D-43811018E47A.jpeg", "rb")
+    bot.send_photo(chat_id, photo)
     bot.send_message(chat_id, 
         "Hey, so good you want to get into making money online 💶\n\n"
         "I have 100s of clients doing the same.. while doing 6 figure months on my stores. The opportunity is endless 🤑\n\n"
